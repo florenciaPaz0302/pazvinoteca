@@ -1,11 +1,17 @@
 import React from "react";
 import './App.css';
-import Header from "./Componets/Header/Header"
+import Navbar from './Componets/Navbar/Navbar';
+import { ItemListContainer } from './Containers/ItemListContainer'
 
 const App = () => {
+
+  const nombre = "Maria";
+  const mensaje = "hola"
   return (
     <>
-      <Header />
+      <Navbar nombreUsuario={nombre} apellidoUsuario="Paz">
+        <ItemListContainer greeting={mensaje}/>
+      </Navbar>
     </>
   );
 }
