@@ -1,4 +1,3 @@
-import { areArraysEqual } from "@mui/base";
 import React, { useEffect, useState } from "react";
 import ItemDetail from "../ItemDetail/ItemDetail";
 

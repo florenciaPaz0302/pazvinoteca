@@ -26,7 +26,7 @@ export const ItemListContainer = ({ greeting }) => {
     };
     getProducts();
 
-  }, []);
+  }, [id]);
 
   return (
     <>
