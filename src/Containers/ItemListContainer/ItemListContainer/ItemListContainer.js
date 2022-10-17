@@ -8,9 +8,9 @@ export const ItemListContainer = ({ greeting }) => {
   const [loading, setLoading] = useState(true);
   
   const { id } = useParams();
-
   const URL_BASE = 'https://fakestoreapi.com/products'
   const URL_CAT = `${URL_BASE}/category/${id}`
+
 
   useEffect(() => {
     const getProducts = async () => {
@@ -26,15 +26,7 @@ export const ItemListContainer = ({ greeting }) => {
     };
     getProducts();
 
-    /*
-    fetch("https://fakestoreapi.com/products")
-      .then((res) => res.json())
-      .then((json) => setProducts(json))
-      .catch((error) => {
-        console.log(error);
-      })
-      .finally(setLoading(false));*/
-  }, [id]);
+  }, []);
 
   return (
     <>
@@ -43,6 +35,15 @@ export const ItemListContainer = ({ greeting }) => {
     </>
   );
 };
+
+/*
+    fetch("https://fakestoreapi.com/products")
+      .then((res) => res.json())
+      .then((json) => setProducts(json))
+      .catch((error) => {
+        console.log(error);
+      })
+      .finally(setLoading(false));*/
 
 
 /*const productos = [
